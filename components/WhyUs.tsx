@@ -31,8 +31,8 @@ export function WhyUs() {
 
           <div className="relative mt-8 overflow-hidden rounded-2xl border border-white/10">
             <img
-              src="https://fastly.picsum.photos/id/284/800/560.jpg?hmac=6hDixQvwzGtZjwqOn5OG1Hib2ZcGBpWxikUnJw908Fg"
-              alt="A Sure Plug specialist reviewing a client brief at a clean desk"
+              src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80"
+              alt="Hands going over an agreement — every operator is checked by hand"
               width={800}
               height={560}
               loading="lazy"

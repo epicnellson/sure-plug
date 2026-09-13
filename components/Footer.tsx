@@ -15,7 +15,7 @@ export function Footer() {
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div>
             <div className="flex items-center">
-              <BrandLogo imgClassName="h-8" />
+              <BrandLogo imgClassName="h-10" />
             </div>
             <p className="mt-3 text-xs text-muted-foreground">{site.tagline}</p>
             <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/5 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[.16em] text-primary">

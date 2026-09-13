@@ -12,7 +12,7 @@ export function BrandLogo({ className, imgClassName }: { className?: string; img
         width={676}
         height={369}
         loading="eager"
-        className={cn('h-11 w-auto', imgClassName)}
+        className={cn('h-14 w-auto', imgClassName)}
       />
     </span>
   )
