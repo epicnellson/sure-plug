@@ -1,22 +1,27 @@
 import type { Metadata } from 'next'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
+import { BackHome } from '@/components/back-home'
 import { site } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'FAQ',
   description:
-    'How SurePlug works: request timelines, deposits, refunds, operator vetting, and where to reach the team.',
+    'How Last Bus Stop works: request timelines, deposits, refunds, specialist vetting, and where to reach the team.',
 }
 
 const faqs: Array<{ q: string; a: string }> = [
   {
-    q: 'What exactly does SurePlug do?',
-    a: 'We match you with a vetted operator who actually does the work — web and app builds, design, product sourcing, strategy, and time-critical assistance. You talk to one real person, not a ticketing queue.',
+    q: 'What exactly does Last Bus Stop do?',
+    a: 'We match you with a specialized developer or designer who actually does the work — web and app builds, design, product sourcing, strategy, and time-critical assistance. You talk to one real person, not a ticketing queue.',
+  },
+  {
+    q: 'Why "Last Bus Stop"?',
+    a: 'Because it is the final destination after every other option. No more juggling cold leads, chasing quotes, or projects that stall halfway. You arrive, you get matched, work gets done.',
   },
   {
     q: 'How fast do I hear back after submitting a request?',
-    a: 'The team is directly notified the moment you hit submit. Most requests get a first reply within 15 minutes and essentially all of them the same day.',
+    a: 'The team is notified the moment you submit. A first reply usually lands within 15 minutes, and practically all requests get a reply the same day.',
   },
   {
     q: 'Does it cost anything to submit a request or get a quote?',
@@ -24,7 +29,7 @@ const faqs: Array<{ q: string; a: string }> = [
   },
   {
     q: 'Who actually does the work?',
-    a: 'A hand-vetted operator assigned to your brief. Every operator is checked for sourcing, communication, and follow-through before they join the network — and you keep their direct contact for the whole job.',
+    a: 'A hand-checked specialist assigned to your brief. Every operator is vetted for craft, communication, and follow-through before joining the network — and you keep their direct contact for the whole job.',
   },
   {
     q: 'What happens if the delivery isn’t right?',
@@ -36,11 +41,11 @@ const faqs: Array<{ q: string; a: string }> = [
   },
   {
     q: 'Do you only work with local clients?',
-    a: 'No. Most work is digital and our sourcing spans multiple regions, currencies, and time zones. Your WhatsApp number can be in a different country from ours — we work wherever the job needs to get done.',
+    a: 'No. Most work is digital and our network spans multiple regions, currencies, and time zones. Your WhatsApp number can be in a different country from ours — we work wherever the job needs to get done.',
   },
   {
     q: 'How do I reach a human, right now?',
-    a: `Email ${site.email} or WhatsApp ${site.whatsapp}. If it's urgent, mark it «URGENT» and it jumps the queue.`,
+    a: `Email ${site.email} or WhatsApp ${site.whatsapp}. If it's urgent, mark it "URGENT" and it jumps the queue.`,
   },
 ]
 
@@ -48,10 +53,8 @@ export default function FaqPage() {
   return (
     <main className="min-h-screen overflow-x-clip bg-background text-foreground">
       <Navbar />
-      <div className="mx-auto max-w-3xl px-5 pb-24 pt-36 lg:px-8">
-        <a href="/" className="font-mono text-xs uppercase tracking-[.2em] text-muted-foreground transition hover:text-primary">
-          ← Back to SurePlug
-        </a>
+      <div className="mx-auto max-w-3xl px-5 pb-24 pt-40 lg:px-8 lg:pt-36">
+        <BackHome />
         <p className="mt-8 font-mono text-xs uppercase tracking-[.2em] text-primary">Answers</p>
         <h1 className="mt-3 text-balance text-4xl font-medium tracking-[-.045em] text-white sm:text-5xl">
           Straight questions, straight answers.

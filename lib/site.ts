@@ -1,11 +1,18 @@
+function resolveBaseUrl() {
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/+$/, '')
+  }
+  return 'https://lastbusstop.co'
+}
+
 export const site = {
-  name: 'SurePlug',
-  handle: '@sureplug.co',
-  tagline: 'The shortcut to getting it done.',
+  name: 'Last Bus Stop',
+  handle: '@lastbusstop.co',
+  tagline: 'The final destination for your tech, design, and sourcing needs.',
   email: 'nelsonemmanuel006@gmail.com',
   whatsapp: '+232 79 826 564',
   whatsappDigits: '23279826564',
-  baseUrl: 'https://sureplug.co',
+  baseUrl: resolveBaseUrl(),
   socials: [] as Array<{ label: string; href: string }>,
 }
 

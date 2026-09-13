@@ -5,7 +5,7 @@ import { site } from '@/lib/site'
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'How SurePlug handles the personal data you submit through the Request a Plug form — plain English, no legalese.',
+    'How Last Bus Stop handles the personal data you submit through the request form — plain English, no legalese.',
 }
 
 export default function PrivacyPage() {
@@ -13,17 +13,17 @@ export default function PrivacyPage() {
     <LegalLayout eyebrow="Legal" title="Privacy Policy" updated="September 12, 2026">
       <LegalSection heading="The short version">
         <p>
-          When you submit a request through the &quot;Request a Plug&quot; form, we collect the
-          minimum needed to get your job done and a human replies to you. We never sell your data,
-          never rent it, and never hand it to advertisers.
+          When you submit a request through the &quot;Start a request&quot; form, we collect the
+          minimum needed to get your job done and have a human reply to you. We never sell your
+          data, never rent it, and never hand it to advertisers.
         </p>
       </LegalSection>
 
       <LegalSection heading="What we collect">
         <ul className="list-disc pl-5">
-          <li>Your name, so operators know who they&apos;re talking to.</li>
+          <li>Your name, so the specialist knows who they&apos;re talking to.</li>
           <li>An email address or WhatsApp number, so we can actually reply.</li>
-          <li>The service category and budget range you picked, to match the right operator.</li>
+          <li>The service category and budget range you picked, to match the right specialist.</li>
           <li>The project details you describe, because that&apos;s the brief.</li>
           <li>
             Basic technical data (IP address, timestamp) purely to block spam and abuse on the
@@ -34,7 +34,7 @@ export default function PrivacyPage() {
 
       <LegalSection heading="How we use it">
         <p>
-          Your submission is used strictly to fulfill your request: matching an operator, sending
+          Your submission is used strictly to fulfill your request: matching a specialist, sending
           you a reply, and following up until your job is done. We don&apos;t use it for marketing
           emails, newsletters, or ad retargeting — ever.
         </p>
@@ -42,10 +42,11 @@ export default function PrivacyPage() {
 
       <LegalSection heading="Who sees it">
         <p>
-          The request goes to the SurePlug team and the specific operator handling your job. To
-          alert the team instantly, a submission may pass through a third-party messaging or email
-          delivery service (for example a push-notification or email service). These providers only
-          relay your message; none of them are allowed to use it for their own purposes.
+          The request goes to the Last Bus Stop team and the specific specialist handling your job.
+          To alert the team instantly, a submission may pass through a third-party messaging or
+          email delivery service (for example a push-notification or email service). These
+          providers only relay your message; none of them are allowed to use it for their own
+          purposes.
         </p>
       </LegalSection>
 

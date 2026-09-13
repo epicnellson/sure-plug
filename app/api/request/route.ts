@@ -5,6 +5,7 @@ import { join } from 'node:path'
 import { serviceOptions, budgetOptions } from '@/lib/data'
 import { sanitizeRequest, validateRequest } from '@/lib/validation'
 import { notifyNewRequest } from '@/lib/notify'
+import { checkRateLimit } from '@/lib/rate-limit'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -12,12 +13,33 @@ export const dynamic = 'force-dynamic'
 const DATA_DIR = join(process.cwd(), '.data')
 const REQUESTS_FILE = join(DATA_DIR, 'requests.jsonl')
 
+function clientIp(request: Request): string | null {
+  const fwd = request.headers.get('x-forwarded-for')
+  if (fwd) return fwd.split(',')[0]?.trim() || null
+  return request.headers.get('x-real-ip')
+}
+
 async function persist(record: unknown) {
   await mkdir(DATA_DIR, { recursive: true })
   await appendFile(REQUESTS_FILE, `${JSON.stringify(record)}\n`, 'utf8')
 }
 
 export async function POST(request: Request) {
+  const ip = clientIp(request)
+  const limit = checkRateLimit(ip ?? 'unknown')
+  if (!limit.allowed) {
+    return NextResponse.json(
+      {
+        ok: false,
+        error: `Too many requests. Please wait ${limit.retryAfterSeconds}s and try again.`,
+      },
+      {
+        status: 429,
+        headers: { 'Retry-After': String(limit.retryAfterSeconds) },
+      },
+    )
+  }
+
   let body: unknown
   try {
     body = await request.json()
@@ -42,7 +64,6 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, errors }, { status: 400 })
   }
 
-  const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? null
   const record = {
     id: randomUUID(),
     receivedAt: new Date().toISOString(),

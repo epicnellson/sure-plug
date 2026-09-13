@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, ShieldCheck, Zap } from 'lucide-react'
+import { ArrowRight, Bus, ShieldCheck } from 'lucide-react'
 import { stats } from '@/lib/data'
 import { CtaButton, CtaLink } from './ui/cta'
 import { useRequest } from './request-context'
@@ -35,7 +35,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.05 }}
             className="max-w-4xl text-balance text-5xl font-medium leading-[.98] tracking-[-.055em] text-white sm:text-7xl lg:text-[5.5rem] xl:text-[6.4rem]"
           >
-            Your <span className="text-primary">sure plug</span> for what&apos;s next.
+            Runarounds <span className="text-primary">end here.</span>
           </motion.h1>
 
           <motion.p
@@ -44,8 +44,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="mt-8 max-w-xl text-pretty text-lg leading-8 text-muted-foreground"
           >
-            Direct contacts, vetted operators, real timelines. No middlemen, no runaround, no
-            ghosting.
+            The final destination for your tech, design, and sourcing needs. Direct execution by
+            specialized developers &amp; designers — real timelines, direct replies, no more
+            runarounds.
           </motion.p>
 
           <motion.div
@@ -65,15 +66,17 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-14 grid max-w-2xl grid-cols-3 gap-5 border-t border-white/10 pt-6"
+            className="mt-14 grid max-w-2xl grid-cols-3 gap-4 border-t border-white/10 pt-6 sm:gap-5"
           >
             {stats.map((stat) => (
               <div key={stat.label}>
-                <p className="text-2xl font-semibold text-white sm:text-3xl">
+                <p className="text-xl font-semibold text-white sm:text-3xl">
                   {stat.value}
                   {stat.suffix && <span className="text-primary">{stat.suffix}</span>}
                 </p>
-                <p className="mt-1 text-xs text-muted-foreground">{stat.label}</p>
+                <p className="mt-1 text-[11px] leading-4 text-muted-foreground sm:text-xs">
+                  {stat.label}
+                </p>
               </div>
             ))}
           </motion.div>
@@ -89,9 +92,9 @@ export function Hero() {
             <div className="animate-float rounded-[2rem] border border-white/10 bg-white/[0.035] p-5 shadow-2xl">
               <div className="flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-[#111817] p-7">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs tracking-[.2em] text-primary">PLUG / 001</span>
+                  <span className="font-mono text-xs tracking-[.2em] text-primary">STOP / 001</span>
                   <span className="flex size-8 items-center justify-center rounded-full bg-primary/15 text-primary shadow-[0_0_20px_hsl(var(--primary)/.25)]">
-                    <Zap className="size-4" />
+                    <Bus className="size-4" />
                   </span>
                 </div>
                 <div className="my-8">
@@ -99,14 +102,14 @@ export function Hero() {
                     Execution status
                   </p>
                   <p className="mt-3 text-5xl font-medium tracking-[-.06em] text-white">
-                    Locked in<span className="text-primary">.</span>
+                    On route<span className="text-primary">.</span>
                   </p>
                 </div>
                 <div className="flex items-center gap-3 border-t border-white/10 pt-5 text-sm text-muted-foreground">
                   <span className="flex size-8 items-center justify-center rounded-full bg-primary/15 text-primary">
                     <ShieldCheck className="size-4" />
                   </span>
-                  Verified operator network
+                  Direct execution, operator to client
                 </div>
               </div>
             </div>

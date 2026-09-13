@@ -2,19 +2,22 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { ToastProvider } from '@/components/Toast'
 import { RequestProvider } from '@/components/request-context'
+import { site } from '@/lib/site'
 import './globals.css'
 
+const title = `Last Bus Stop – Direct Execution, No Runarounds`
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://sureplug.co'),
+  metadataBase: new URL(site.baseUrl),
   title: {
-    default: 'SurePlug – Direct Contacts, Vetted Operators, Real Timelines',
-    template: '%s · SurePlug',
+    default: title,
+    template: '%s · Last Bus Stop',
   },
   description:
-    'Skip the middlemen. SurePlug connects you directly with vetted operators for web & app builds, design, product sourcing, and time-critical assistance — with real timelines and no ghosting.',
-  applicationName: 'SurePlug',
+    'The final destination for your tech, design, and sourcing needs. Last Bus Stop connects you directly with specialized developers & designers — real timelines, direct replies, no more runarounds.',
+  applicationName: site.name,
   keywords: [
-    'SurePlug',
+    'Last Bus Stop',
     'web development',
     'app development',
     'graphic design',
@@ -22,7 +25,7 @@ export const metadata: Metadata = {
     'priority assistance',
     'digital strategy',
   ],
-  authors: [{ name: 'SurePlug' }],
+  authors: [{ name: site.name }],
   category: 'Business',
   alternates: {
     canonical: '/',
@@ -30,16 +33,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: '/',
-    siteName: 'SurePlug',
-    title: 'SurePlug – Direct Contacts, Vetted Operators, Real Timelines',
+    siteName: site.name,
+    title,
     description:
-      'Skip the middlemen. SurePlug connects you directly with vetted operators for web & app builds, design, product sourcing, and time-critical assistance — with real timelines and no ghosting.',
+      'The final destination for your tech, design, and sourcing needs. Direct execution by specialized developers & designers — real timelines, direct replies, no more runarounds.',
   },
   twitter: {
     card: 'summary',
-    title: 'SurePlug – Direct Contacts, Vetted Operators, Real Timelines',
+    title,
     description:
-      'Skip the middlemen. SurePlug connects you directly with vetted operators for web & app builds, design, product sourcing, and time-critical assistance — with real timelines and no ghosting.',
+      'The final destination for your tech, design, and sourcing needs. Direct execution by specialized developers & designers — real timelines, direct replies, no more runarounds.',
   },
   robots: {
     index: true,

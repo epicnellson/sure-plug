@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Zap } from 'lucide-react'
+import { ArrowRight, Bus } from 'lucide-react'
 import { CtaButton } from './ui/cta'
 import { useRequest } from './request-context'
 
@@ -18,13 +18,13 @@ export function Cta() {
         className="relative overflow-hidden rounded-3xl border border-primary/20 bg-primary/[0.06] p-8 text-center shadow-[inset_0_1px_0_hsl(var(--primary)/.15)] sm:p-16"
       >
         <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
-        <Zap className="mx-auto size-6 text-primary" />
+        <Bus className="mx-auto size-6 text-primary" />
         <h2 className="mx-auto mt-5 max-w-2xl text-balance text-4xl font-medium tracking-[-.045em] text-white sm:text-6xl">
-          Have a request? We&apos;ve got a plug for that.
+          Runarounds end at the last stop.
         </h2>
         <p className="mx-auto mt-5 max-w-lg leading-7 text-muted-foreground">
-          Drop the brief below. We&apos;ll match it to a vetted operator and come back with a name,
-          a timeline, and a clear next step — usually the same day.
+          Drop the brief below. We&apos;ll match it to the right specialist and come back with a
+          name, a realistic timeline, and a clear next step — usually the same day.
         </p>
         <CtaButton onClick={openRequest} className="group mt-9">
           Start a request

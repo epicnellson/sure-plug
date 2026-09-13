@@ -109,7 +109,7 @@ export function RequestModal({ open, onClose }: { open: boolean; onClose: () => 
         setStatus('success')
         toast({
           title: 'Request sent',
-          description: `We're matching you with the right operator — expect a reply within 15 minutes.`,
+          description: `Matching you with the right specialist — expect a reply within 15 minutes.`,
         })
         return
       }
@@ -149,7 +149,7 @@ export function RequestModal({ open, onClose }: { open: boolean; onClose: () => 
         <motion.div
           role="dialog"
           aria-modal="true"
-          aria-label="Request a plug"
+          aria-label="New request form"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -198,7 +198,7 @@ export function RequestModal({ open, onClose }: { open: boolean; onClose: () => 
                     Request received.
                   </h2>
                   <p className="mx-auto mt-3 max-w-xs text-sm leading-6 text-muted-foreground">
-                    The right plug is reviewing your brief. Expect a response within 15 minutes.
+                    A specialist is reviewing your brief. Expect a reply within 15 minutes.
                   </p>
                   {requestId && (
                     <p className="mt-4 font-mono text-xs text-muted-foreground/60">
@@ -223,10 +223,10 @@ export function RequestModal({ open, onClose }: { open: boolean; onClose: () => 
                     Start a request
                   </p>
                   <h2 className="mt-3 text-3xl font-medium tracking-[-.04em] text-white">
-                    What are we plugging you into?
+                    What do you need done?
                   </h2>
                   <p className="mt-3 text-sm leading-6 text-muted-foreground">
-                    Give us the basics and we&apos;ll make the right introduction.
+                    Give us the basics and we&apos;ll put you in front of the right specialist.
                   </p>
 
                   <motion.form

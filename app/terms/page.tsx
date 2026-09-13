@@ -5,36 +5,36 @@ import { site } from '@/lib/site'
 export const metadata: Metadata = {
   title: 'Terms & Conditions',
   description:
-    'The agreed terms for using SurePlug — how requests are processed, timelines, deposits, and client responsibilities.',
+    'The agreed terms for using Last Bus Stop — how requests are processed, timelines, deposits, and client responsibilities.',
 }
 
 export default function TermsPage() {
   return (
     <LegalLayout eyebrow="Legal" title="Terms & Conditions" updated="September 12, 2026">
-      <LegalSection heading="What SurePlug is">
+      <LegalSection heading="What Last Bus Stop is">
         <p>
-          SurePlug is a matching service. We connect clients with a vetted network of independent
-          operators who carry out the work. SurePlug is not the employer of these operators, and
-          each job is delivered directly by the operator assigned to you.
+          Last Bus Stop is a matching service. We connect clients with a vetted network of
+          independent specialists who carry out the work. Last Bus Stop is not the employer of these
+          specialists, and each job is delivered directly by the person assigned to you.
         </p>
       </LegalSection>
 
       <LegalSection heading="How a request works">
         <p>
-          Submit the brief through the &quot;Request a Plug&quot; form. A member of the team reviews
-          it and replies directly — normally on the same day. Once scope and price are agreed, your
-          operator is assigned and work begins. There are no hidden layers: the person who replies
-          is connected to the person who does the work.
+          Submit the brief through the &quot;Start a request&quot; form. A member of the team
+          reviews it and replies directly — normally on the same day. Once scope and price are
+          agreed, your specialist is assigned and work begins. There are no hidden layers: the
+          person who replies is connected to the person who does the work.
         </p>
       </LegalSection>
 
       <LegalSection heading="Timelines & delivery">
         <p>
-          Turnaround times on the site are working estimates (for example &quot;3–7 days&quot;).
-          They become binding only once you approve the agreed scope and schedule in writing — by
-          email or WhatsApp. If a delay is caused by a third party outside our control (a supplier,
-          payment processor, or freight carrier), we tell you as soon as we know and agree a revised
-          date with you.
+          Turnaround times on the site are working estimates (for example &quot;3–7 business
+          days&quot;). They become binding only once you approve the agreed scope and schedule in
+          writing — by email or WhatsApp. If a delay is caused by a third party outside our control
+          (a supplier, payment processor, or freight carrier), we tell you as soon as we know and
+          agree a revised date with you.
         </p>
       </LegalSection>
 
@@ -74,9 +74,9 @@ export default function TermsPage() {
 
       <LegalSection heading="Limitation of liability">
         <p>
-          Operators and SurePlug each work in good faith to deliver what was agreed. To the extent
-          permitted by law, liability for a given request is limited to the amount you actually paid
-          for that request. Nothing here limits your statutory rights.
+          Specialists and Last Bus Stop each work in good faith to deliver what was agreed. To the
+          extent permitted by law, liability for a given request is limited to the amount you
+          actually paid for that request. Nothing here limits your statutory rights.
         </p>
       </LegalSection>
 

@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
+import { BackHome } from '@/components/back-home'
 
 export function LegalLayout({
   eyebrow,
@@ -16,10 +17,8 @@ export function LegalLayout({
   return (
     <main className="min-h-screen overflow-x-clip bg-background text-foreground">
       <Navbar />
-      <div className="mx-auto min-h-[70vh] max-w-3xl px-5 pb-24 pt-36 lg:px-8">
-        <a href="/" className="font-mono text-xs uppercase tracking-[.2em] text-muted-foreground transition hover:text-primary">
-          ← Back to SurePlug
-        </a>
+      <div className="mx-auto min-h-[70vh] max-w-3xl px-5 pb-24 pt-40 lg:px-8 lg:pt-36">
+        <BackHome />
         <p className="mt-8 font-mono text-xs uppercase tracking-[.2em] text-primary">{eyebrow}</p>
         <h1 className="mt-3 text-balance text-4xl font-medium tracking-[-.045em] text-white sm:text-5xl">
           {title}

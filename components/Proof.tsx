@@ -1,4 +1,4 @@
-import { Star } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { testimonials } from '@/lib/data'
 import { VouchCard } from './VouchCard'
 
@@ -15,16 +15,20 @@ export function Proof() {
               Proof &amp; vouches
             </p>
             <h2 className="text-balance text-4xl font-medium tracking-[-.045em] text-white sm:text-5xl">
-              Good work travels.
+              Handed over, not hyped.
             </h2>
             <p className="mt-4 max-w-md text-sm leading-6 text-muted-foreground">
-              Striped-down, real-world names across the categories we actually cover. Reach any of
-              them and you get your answer fast.
+              Real deliverables from named clients — scope, timeline, and hand-off spelled out.
+              References available on request.
             </p>
           </div>
-          <div className="hidden items-center gap-2 text-sm text-muted-foreground sm:flex">
-            <Star className="size-4 fill-primary text-primary" /> 4.9 average rating
-          </div>
+          <a
+            href="#request"
+            className="hidden items-center gap-2 text-sm text-muted-foreground transition hover:text-white sm:flex"
+          >
+            Get your own&nbsp;
+            <ArrowRight className="size-4" />
+          </a>
         </div>
 
         <div className="grid gap-4 lg:grid-cols-3">

@@ -1,13 +1,12 @@
-import { Mail, MessageCircle, PlugZap } from 'lucide-react'
+import { Mail, MessageCircle } from 'lucide-react'
 import { navLinks } from '@/lib/data'
 import { site, whatsappUrl } from '@/lib/site'
+import { BrandMark } from './brand'
 
 const legalLinks = [
   { href: '/privacy', label: 'Privacy' },
   { href: '/terms', label: 'Terms' },
 ]
-
-const footerLinks = [...navLinks, { href: `mailto:${site.email}`, label: 'Contact' }]
 
 export function Footer() {
   return (
@@ -15,10 +14,8 @@ export function Footer() {
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div>
-            <div className="flex items-center gap-2 font-mono text-sm font-bold tracking-[.18em] text-white">
-              <span className="flex size-7 items-center justify-center rounded-md bg-primary text-background shadow-[0_0_18px_hsl(var(--primary)/.3)]">
-                <PlugZap className="size-3.5" />
-              </span>
+            <div className="flex items-center gap-2.5 font-mono text-sm font-bold tracking-[.18em] text-white">
+              <BrandMark glyphClassName="size-3.5" />
               {site.name.toUpperCase()}
             </div>
             <p className="mt-3 text-xs text-muted-foreground">{site.tagline}</p>
