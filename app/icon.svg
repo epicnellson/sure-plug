@@ -4,7 +4,7 @@
       <stop offset="0" stop-color="#0f1713"/>
       <stop offset="1" stop-color="#060a08"/>
     </linearGradient>
-    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.55">
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.6">
       <stop offset="0" stop-color="#10b981" stop-opacity="0.55"/>
       <stop offset="1" stop-color="#10b981" stop-opacity="0"/>
     </radialGradient>
@@ -15,11 +15,13 @@
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="15" fill="url(#bg)"/>
-  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="14.25" fill="none" stroke="#10b981" stroke-opacity="0.35" stroke-width="1.5"/>
-  <circle cx="32" cy="30" r="30" fill="url(#glow)"/>
-  <g fill="none" stroke="url(#wire)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M32 56C26 46 19 39 19 27a13 13 0 0 1 26 0c0 12-7 19-13 29Z"/>
-    <path d="M39 27L36.95 31.95 32 34 27.05 31.95 25 27 27.05 22.05 32 20 36.95 22.05Z" fill="url(#wire)" stroke="none"/>
-    <circle cx="32" cy="27" r="2.2" fill="#0d1311" stroke="none"/>
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="14.25" fill="none" stroke="#10b981" stroke-opacity="0.4" stroke-width="1.5"/>
+  <circle cx="32" cy="27" r="26" fill="url(#glow)"/>
+  <g transform="translate(8 10) scale(1.9)" fill="none" stroke="url(#wire)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z"/>
+    <path d="m2 22 3-3"/>
+    <path d="M7.5 13.5 10 11"/>
+    <path d="M10.5 16.5 13 14"/>
+    <path d="m18 3-4 4h6l-4 4"/>
   </g>
 </svg>

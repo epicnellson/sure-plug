@@ -7,17 +7,17 @@ import { site } from '@/lib/site'
 export const metadata: Metadata = {
   title: 'FAQ',
   description:
-    'How Last Bus Stop works: request timelines, deposits, refunds, specialist vetting, and where to reach the team.',
+    'How Sure Plug works: request timelines, deposits, refunds, specialist vetting, and where to reach the team.',
 }
 
 const faqs: Array<{ q: string; a: string }> = [
   {
-    q: 'What exactly does Last Bus Stop do?',
+    q: 'What exactly does Sure Plug do?',
     a: 'We match you with a specialized developer or designer who actually does the work — web and app builds, design, product sourcing, strategy, and time-critical assistance. You talk to one real person, not a ticketing queue.',
   },
   {
-    q: 'Why "Last Bus Stop"?',
-    a: 'Because it is the final destination after every other option. No more juggling cold leads, chasing quotes, or projects that stall halfway. You arrive, you get matched, work gets done.',
+    q: 'Why "Sure Plug"?',
+    a: 'The name is the promise: one reliable point of contact for your tech, design, and sourcing needs. Plug in once, and the person who answers is connected to the person who does the work — no chasing, no middlemen.',
   },
   {
     q: 'How fast do I hear back after submitting a request?',

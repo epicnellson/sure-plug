@@ -29,7 +29,7 @@ function formatPayload(record: RequestRecord) {
 
 function formatTelegramText(payload: ReturnType<typeof formatPayload>) {
   return [
-    'NEW REQUEST — Last Bus Stop',
+    'NEW REQUEST — Sure Plug',
     '',
     `Name: ${payload.name}`,
     `Contact: ${payload.contact}`,
@@ -49,7 +49,7 @@ function formatEmailHtml(payload: ReturnType<typeof formatPayload>) {
     `<tr><td style="padding:8px 0;color:#6b7280;font-weight:600;white-space:nowrap;vertical-align:top">${label}</td><td style="padding:8px 0;color:#111827;vertical-align:top;word-break:break-word">${value}</td></tr>`
   return [
     '<div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:560px;margin:0 auto">',
-    '<h2 style="color:#059669;margin:0 0 16px">New request on Last Bus Stop</h2>',
+    '<h2 style="color:#059669;margin:0 0 16px">New request on Sure Plug</h2>',
     '<table style="border-collapse:collapse;width:100%">',
     row('Request', `<code>${esc(payload.id)}</code>`),
     row('Received', esc(payload.receivedAt)),
@@ -120,7 +120,7 @@ async function notifyResend(payload: ReturnType<typeof formatPayload>, timeoutMs
       method: 'POST',
       headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        from: process.env.REQUEST_NOTIFY_FROM || `Last Bus Stop <onboarding@resend.dev>`,
+        from: process.env.REQUEST_NOTIFY_FROM || `Sure Plug <onboarding@resend.dev>`,
         to,
         subject: `New request: ${payload.service} — ${payload.name}`,
         html: formatEmailHtml(payload),

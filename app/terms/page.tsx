@@ -5,16 +5,16 @@ import { site } from '@/lib/site'
 export const metadata: Metadata = {
   title: 'Terms & Conditions',
   description:
-    'The agreed terms for using Last Bus Stop — how requests are processed, timelines, deposits, and client responsibilities.',
+    'The agreed terms for using Sure Plug — how requests are processed, timelines, deposits, and client responsibilities.',
 }
 
 export default function TermsPage() {
   return (
     <LegalLayout eyebrow="Legal" title="Terms & Conditions" updated="September 12, 2026">
-      <LegalSection heading="What Last Bus Stop is">
+      <LegalSection heading="What Sure Plug is">
         <p>
-          Last Bus Stop is a matching service. We connect clients with a vetted network of
-          independent specialists who carry out the work. Last Bus Stop is not the employer of these
+          Sure Plug is a matching service. We connect clients with a vetted network of
+          independent specialists who carry out the work. Sure Plug is not the employer of these
           specialists, and each job is delivered directly by the person assigned to you.
         </p>
       </LegalSection>
@@ -74,7 +74,7 @@ export default function TermsPage() {
 
       <LegalSection heading="Limitation of liability">
         <p>
-          Specialists and Last Bus Stop each work in good faith to deliver what was agreed. To the
+          Specialists and Sure Plug each work in good faith to deliver what was agreed. To the
           extent permitted by law, liability for a given request is limited to the amount you
           actually paid for that request. Nothing here limits your statutory rights.
         </p>

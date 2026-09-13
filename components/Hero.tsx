@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Bus, ShieldCheck } from 'lucide-react'
+import { ArrowRight, PlugZap, ShieldCheck } from 'lucide-react'
 import { stats } from '@/lib/data'
 import { CtaButton, CtaLink } from './ui/cta'
 import { useRequest } from './request-context'
@@ -35,7 +35,8 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.05 }}
             className="max-w-4xl text-balance text-5xl font-medium leading-[.98] tracking-[-.055em] text-white sm:text-7xl lg:text-[5.5rem] xl:text-[6.4rem]"
           >
-            Runarounds <span className="text-primary">end here.</span>
+            Your <span className="text-primary">Sure Plug</span> for Quality Tech, Design &amp;
+            Sourcing.
           </motion.h1>
 
           <motion.p
@@ -44,9 +45,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="mt-8 max-w-xl text-pretty text-lg leading-8 text-muted-foreground"
           >
-            The final destination for your tech, design, and sourcing needs. Direct execution by
-            specialized developers &amp; designers — real timelines, direct replies, no more
-            runarounds.
+            Fast, verified, and 100% reliable. Direct execution with zero middleman delays.
           </motion.p>
 
           <motion.div
@@ -92,9 +91,9 @@ export function Hero() {
             <div className="animate-float rounded-[2rem] border border-white/10 bg-white/[0.035] p-5 shadow-2xl">
               <div className="flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-[#111817] p-7">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs tracking-[.2em] text-primary">STOP / 001</span>
+                  <span className="font-mono text-xs tracking-[.2em] text-primary">PLUG / 001</span>
                   <span className="flex size-8 items-center justify-center rounded-full bg-primary/15 text-primary shadow-[0_0_20px_hsl(var(--primary)/.25)]">
-                    <Bus className="size-4" />
+                    <PlugZap className="size-4" />
                   </span>
                 </div>
                 <div className="my-8">
@@ -102,7 +101,7 @@ export function Hero() {
                     Execution status
                   </p>
                   <p className="mt-3 text-5xl font-medium tracking-[-.06em] text-white">
-                    On route<span className="text-primary">.</span>
+                    Locked in<span className="text-primary">.</span>
                   </p>
                 </div>
                 <div className="flex items-center gap-3 border-t border-white/10 pt-5 text-sm text-muted-foreground">

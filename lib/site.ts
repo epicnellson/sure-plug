@@ -2,13 +2,13 @@ function resolveBaseUrl() {
   if (process.env.NEXT_PUBLIC_SITE_URL) {
     return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/+$/, '')
   }
-  return 'https://lastbusstop.co'
+  return 'https://sureplug.co'
 }
 
 export const site = {
-  name: 'Last Bus Stop',
-  handle: '@lastbusstop.co',
-  tagline: 'The final destination for your tech, design, and sourcing needs.',
+  name: 'Sure Plug',
+  handle: '@sureplug.co',
+  tagline: 'Fast, verified, and 100% reliable. Direct execution with zero middleman delays.',
   email: 'nelsonemmanuel006@gmail.com',
   whatsapp: '+232 79 826 564',
   whatsappDigits: '23279826564',

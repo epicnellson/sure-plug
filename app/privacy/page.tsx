@@ -5,7 +5,7 @@ import { site } from '@/lib/site'
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'How Last Bus Stop handles the personal data you submit through the request form — plain English, no legalese.',
+    'How Sure Plug handles the personal data you submit through the request form — plain English, no legalese.',
 }
 
 export default function PrivacyPage() {
@@ -42,7 +42,7 @@ export default function PrivacyPage() {
 
       <LegalSection heading="Who sees it">
         <p>
-          The request goes to the Last Bus Stop team and the specific specialist handling your job.
+          The request goes to the Sure Plug team and the specific specialist handling your job.
           To alert the team instantly, a submission may pass through a third-party messaging or
           email delivery service (for example a push-notification or email service). These
           providers only relay your message; none of them are allowed to use it for their own

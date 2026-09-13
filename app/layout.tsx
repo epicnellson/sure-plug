@@ -5,19 +5,19 @@ import { RequestProvider } from '@/components/request-context'
 import { site } from '@/lib/site'
 import './globals.css'
 
-const title = `Last Bus Stop – Direct Execution, No Runarounds`
+const title = `Sure Plug – Direct Execution, No Middlemen`
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.baseUrl),
   title: {
     default: title,
-    template: '%s · Last Bus Stop',
+    template: '%s · Sure Plug',
   },
   description:
-    'The final destination for your tech, design, and sourcing needs. Last Bus Stop connects you directly with specialized developers & designers — real timelines, direct replies, no more runarounds.',
+    'Fast, verified, and 100% reliable. Direct execution with zero middleman delays. Sure Plug connects you directly with specialized developers & designers — real timelines, direct replies, no ghosting.',
   applicationName: site.name,
   keywords: [
-    'Last Bus Stop',
+    'Sure Plug',
     'web development',
     'app development',
     'graphic design',
@@ -36,13 +36,13 @@ export const metadata: Metadata = {
     siteName: site.name,
     title,
     description:
-      'The final destination for your tech, design, and sourcing needs. Direct execution by specialized developers & designers — real timelines, direct replies, no more runarounds.',
+      'Fast, verified, and 100% reliable. Direct execution with zero middleman delays. Sure Plug connects you directly with specialized developers & designers — real timelines, direct replies, no ghosting.',
   },
   twitter: {
     card: 'summary',
     title,
     description:
-      'The final destination for your tech, design, and sourcing needs. Direct execution by specialized developers & designers — real timelines, direct replies, no more runarounds.',
+      'Fast, verified, and 100% reliable. Direct execution with zero middleman delays. Sure Plug connects you directly with specialized developers & designers — real timelines, direct replies, no ghosting.',
   },
   robots: {
     index: true,

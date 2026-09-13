@@ -15,13 +15,13 @@ export function WhyUs() {
           className="lg:sticky lg:top-28 lg:self-start"
         >
           <p className="mb-4 font-mono text-xs uppercase tracking-[.2em] text-primary">
-            Why the last stop
+            Why the plug
           </p>
           <h2 className="text-balance text-4xl font-medium tracking-[-.045em] text-white sm:text-5xl">
             Reliability is the <span className="text-muted-foreground">whole point.</span>
           </h2>
           <p className="mt-6 max-w-md leading-7 text-muted-foreground">
-            The internet is full of people who can do a thing. We built Last Bus Stop for people who
+            The internet is full of people who can do a thing. We built Sure Plug for people who
             actually do the thing — and reply to your messages while doing it.
           </p>
           <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs text-muted-foreground">
