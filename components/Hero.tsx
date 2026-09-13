@@ -44,8 +44,8 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="mt-8 max-w-xl text-pretty text-lg leading-8 text-muted-foreground"
           >
-            Fast, verified, and 100% reliable. Stop searching—get directly connected to top-tier
-            execution.
+            Direct contacts, vetted operators, real timelines. No middlemen, no runaround, no
+            ghosting.
           </motion.p>
 
           <motion.div

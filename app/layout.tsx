@@ -7,16 +7,16 @@ import './globals.css'
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://sureplug.co'),
   title: {
-    default: 'SurePlug – Your Direct Line to Top-Tier Execution',
+    default: 'SurePlug – Direct Contacts, Vetted Operators, Real Timelines',
     template: '%s · SurePlug',
   },
   description:
-    'Fast, verified, and 100% reliable service provider platform. Get connected to premium services—tech, design, sourcing, and more.',
+    'Skip the middlemen. SurePlug connects you directly with vetted operators for web & app builds, design, product sourcing, and time-critical assistance — with real timelines and no ghosting.',
   applicationName: 'SurePlug',
   keywords: [
     'SurePlug',
-    'freelance services',
     'web development',
+    'app development',
     'graphic design',
     'product sourcing',
     'priority assistance',
@@ -27,27 +27,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
-  icons: {
-    icon: [
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-  },
   openGraph: {
     type: 'website',
     url: '/',
     siteName: 'SurePlug',
-    title: 'SurePlug – Your Direct Line to Top-Tier Execution',
+    title: 'SurePlug – Direct Contacts, Vetted Operators, Real Timelines',
     description:
-      'Fast, verified, and 100% reliable service provider platform. Get connected to premium services—tech, design, sourcing, and more.',
+      'Skip the middlemen. SurePlug connects you directly with vetted operators for web & app builds, design, product sourcing, and time-critical assistance — with real timelines and no ghosting.',
   },
   twitter: {
     card: 'summary',
-    title: 'SurePlug – Your Direct Line to Top-Tier Execution',
+    title: 'SurePlug – Direct Contacts, Vetted Operators, Real Timelines',
     description:
-      'Fast, verified, and 100% reliable service provider platform. Get connected to premium services—tech, design, sourcing, and more.',
+      'Skip the middlemen. SurePlug connects you directly with vetted operators for web & app builds, design, product sourcing, and time-critical assistance — with real timelines and no ghosting.',
   },
   robots: {
     index: true,

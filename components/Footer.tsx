@@ -2,72 +2,109 @@ import { Mail, MessageCircle, PlugZap } from 'lucide-react'
 import { navLinks } from '@/lib/data'
 import { site, whatsappUrl } from '@/lib/site'
 
-const footerLinks = [
-  ...navLinks.filter((l) => l.href !== '#faq'),
-  { href: `mailto:${site.email}`, label: 'Contact' },
+const legalLinks = [
+  { href: '/privacy', label: 'Privacy' },
+  { href: '/terms', label: 'Terms' },
 ]
+
+const footerLinks = [...navLinks, { href: `mailto:${site.email}`, label: 'Contact' }]
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 px-5 py-10 lg:px-8">
-      <div className="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
-        <div>
-          <div className="flex items-center gap-2 font-mono text-sm font-bold tracking-[.18em] text-white">
-            <span className="flex size-7 items-center justify-center rounded-md bg-primary text-background shadow-[0_0_18px_hsl(var(--primary)/.3)]">
-              <PlugZap className="size-3.5" />
-            </span>
-            {site.name.toUpperCase()}
+    <footer className="border-t border-white/10 px-5 py-12 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+          <div>
+            <div className="flex items-center gap-2 font-mono text-sm font-bold tracking-[.18em] text-white">
+              <span className="flex size-7 items-center justify-center rounded-md bg-primary text-background shadow-[0_0_18px_hsl(var(--primary)/.3)]">
+                <PlugZap className="size-3.5" />
+              </span>
+              {site.name.toUpperCase()}
+            </div>
+            <p className="mt-3 text-xs text-muted-foreground">{site.tagline}</p>
+            <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/5 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[.16em] text-primary">
+              <span className="size-1.5 animate-pulse rounded-full bg-primary" />
+              Accepting new requests
+            </p>
           </div>
-          <p className="mt-3 text-xs text-muted-foreground">{site.tagline}</p>
-        </div>
 
-        <div className="flex flex-wrap items-center gap-5 text-xs text-muted-foreground">
-          {footerLinks.map((link) => (
-            <a key={link.label} href={link.href} className="transition hover:text-white">
-              {link.label}
-            </a>
-          ))}
-        </div>
+          <div className="flex flex-wrap gap-x-12 gap-y-8">
+            <div className="flex flex-col gap-3">
+              <p className="font-mono text-[10px] uppercase tracking-[.18em] text-muted-foreground/60">
+                Explore
+              </p>
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-xs text-muted-foreground transition hover:text-white"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
 
-        <div className="flex items-center gap-2 text-xs text-primary">
-          <span className="size-1.5 animate-pulse rounded-full bg-primary shadow-[0_0_8px_hsl(var(--primary))]" />
-          Accepting new clients
-        </div>
-      </div>
+            <div className="flex flex-col gap-3">
+              <p className="font-mono text-[10px] uppercase tracking-[.18em] text-muted-foreground/60">
+                Company
+              </p>
+              {legalLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-xs text-muted-foreground transition hover:text-white"
+                >
+                  {link.label}
+                </a>
+              ))}
+              <a
+                href={`mailto:${site.email}`}
+                className="inline-flex items-center gap-1.5 text-xs text-muted-foreground transition hover:text-white"
+              >
+                <Mail className="size-3.5" />
+                {site.email}
+              </a>
+            </div>
 
-      <div className="mx-auto mt-10 flex max-w-7xl flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-5 text-xs text-muted-foreground">
-        <span>© 2026 {site.name}</span>
-
-        <div className="flex items-center gap-5">
-          {site.socials.map((social) => (
-            <a
-              key={social.label}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition hover:text-white"
-            >
-              {social.label}
-            </a>
-          ))}
-
-          <a
-            href={`mailto:${site.email}`}
-            className="inline-flex items-center gap-1.5 transition hover:text-white"
-          >
-            <Mail className="size-3.5" />
-            {site.email}
-          </a>
+            {site.socials.length > 0 && (
+              <div className="flex flex-col gap-3">
+                <p className="font-mono text-[10px] uppercase tracking-[.18em] text-muted-foreground/60">
+                  Socials
+                </p>
+                {site.socials.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-muted-foreground transition hover:text-white"
+                  >
+                    {social.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
 
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 transition hover:text-white"
+            className="inline-flex w-fit items-center gap-2 rounded-full bg-primary/10 px-4 py-2.5 text-xs font-semibold text-primary transition hover:bg-primary/20 hover:shadow-[0_0_24px_hsl(var(--primary)/.25)]"
           >
-            <MessageCircle className="size-3.5" />
-            {site.whatsapp}
+            <MessageCircle className="size-4" />
+            Chat on WhatsApp
           </a>
+        </div>
+
+        <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-5 text-xs text-muted-foreground">
+          <span>
+            © {new Date().getFullYear()} {site.name}. All rights reserved.
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <span className="size-1.5 animate-pulse rounded-full bg-primary" />
+            Operated with a real human on the other end
+          </span>
         </div>
       </div>
     </footer>

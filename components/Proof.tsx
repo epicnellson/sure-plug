@@ -17,6 +17,10 @@ export function Proof() {
             <h2 className="text-balance text-4xl font-medium tracking-[-.045em] text-white sm:text-5xl">
               Good work travels.
             </h2>
+            <p className="mt-4 max-w-md text-sm leading-6 text-muted-foreground">
+              Striped-down, real-world names across the categories we actually cover. Reach any of
+              them and you get your answer fast.
+            </p>
           </div>
           <div className="hidden items-center gap-2 text-sm text-muted-foreground sm:flex">
             <Star className="size-4 fill-primary text-primary" /> 4.9 average rating

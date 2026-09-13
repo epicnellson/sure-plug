@@ -20,15 +20,15 @@ export function Services() {
         >
           <div>
             <p className="mb-4 font-mono text-xs uppercase tracking-[.2em] text-primary">
-              The catalog
+              What we handle
             </p>
             <h2 className="max-w-2xl text-balance text-4xl font-medium tracking-[-.045em] text-white sm:text-5xl">
-              One direct line to <span className="text-muted-foreground">better execution.</span>
+              One direct line to work <span className="text-muted-foreground">that gets done.</span>
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-6 text-muted-foreground">
             No layers of account managers. No mystery timelines. Just the right specialist for the
-            job.
+            job — and a reply when you message them.
           </p>
         </motion.div>
 
