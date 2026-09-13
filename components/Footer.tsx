@@ -1,7 +1,7 @@
 import { Mail, MessageCircle } from 'lucide-react'
 import { navLinks } from '@/lib/data'
 import { site, whatsappUrl } from '@/lib/site'
-import { BrandMark } from './brand'
+import { BrandLogo } from './brand'
 
 const legalLinks = [
   { href: '/privacy', label: 'Privacy' },
@@ -14,9 +14,8 @@ export function Footer() {
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
           <div>
-            <div className="flex items-center gap-2.5 font-mono text-sm font-bold tracking-[.18em] text-white">
-              <BrandMark glyphClassName="size-3.5" />
-              {site.name.toUpperCase()}
+            <div className="flex items-center">
+              <BrandLogo imgClassName="h-8" />
             </div>
             <p className="mt-3 text-xs text-muted-foreground">{site.tagline}</p>
             <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/5 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[.16em] text-primary">

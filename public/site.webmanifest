@@ -1,0 +1,23 @@
+{
+  "name": "Sure Plug",
+  "short_name": "Sure Plug",
+  "description": "Fast, verified, and 100% reliable. Direct execution with zero middleman delays.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060a08",
+  "theme_color": "#10b981",
+  "icons": [
+    {
+      "src": "/brand-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

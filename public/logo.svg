@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" role="img" aria-label="Sure Plug">
+  <defs>
+    <linearGradient id="logo-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10b981"/>
+      <stop offset="1" stop-color="#0e9f6e"/>
+    </linearGradient>
+    <filter id="logo-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#logo-glow)">
+    <rect x="2" y="2" width="44" height="44" rx="11" fill="url(#logo-bg)"/>
+  </g>
+
+  <g transform="translate(12 12)" fill="none" stroke="#060a08" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z"/>
+    <path d="m2 22 3-3"/>
+    <path d="M7.5 13.5 10 11"/>
+    <path d="M10.5 16.5 13 14"/>
+    <path d="m18 3-4 4h6l-4 4"/>
+  </g>
+
+  <text
+    x="60"
+    y="30"
+    font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+    font-size="20"
+    font-weight="700"
+    letter-spacing="4.5"
+    fill="#ffffff"
+  >SURE PLUG</text>
+</svg>

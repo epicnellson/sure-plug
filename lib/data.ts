@@ -14,6 +14,8 @@ export interface Service {
   copy: string
   time: string
   featured?: boolean
+  image?: string
+  imageAlt?: string
 }
 
 export const services: Service[] = [
@@ -23,36 +25,48 @@ export const services: Service[] = [
     copy: 'Sites, dashboards, and automations built by developers who reply to your messages. Scope agreed up front, builds shipped in stages.',
     time: '3–7 business days',
     featured: true,
+    image: 'https://fastly.picsum.photos/id/984/640/420.jpg?hmac=c7hfJ3FpuQMMiQWXOCeb1Iv-hKgVk7ufTWTWlPfNX30',
+    imageAlt: 'Developer workspace writing code for a client web or app build',
   },
   {
     icon: Palette,
     title: 'Custom Graphic Design',
     copy: 'Logos, packaging, and brand assets with source files and a documented rationale. Revisions included, no silent retention.',
     time: '1–4 business days',
+    image: 'https://fastly.picsum.photos/id/807/640/420.jpg?hmac=-d3g8MX7c8d0MjkzcF_c14bd58ogJFamWgN6M7pRB34',
+    imageAlt: 'Designer drafting a brand palette on a drawing tablet',
   },
   {
     icon: ShoppingBag,
     title: 'Product Sourcing',
     copy: 'Hard-to-find goods and verified vendors, with quotes, lead times, and QC checklists put in writing before you commit.',
     time: '2–5 business days',
+    image: 'https://fastly.picsum.photos/id/988/640/420.jpg?hmac=Qboq1DNFwht6MJrsR0t98pwKb_vgezhHwBRd9gdnL4c',
+    imageAlt: 'Packaged products ready for supplier verification',
   },
   {
     icon: MessageCircle,
     title: 'Priority Assistance',
     copy: 'A direct line to someone who moves when the clock is running. For time-sensitive asks where a slow reply costs real money.',
     time: '< 15 min first reply',
+    image: 'https://fastly.picsum.photos/id/230/640/420.jpg?hmac=88_38ZPRYpzsW6-x_OUmyqcDDtf4b1wbP1ageGn2P4I',
+    imageAlt: 'Hands replying to a client message on a phone at a desk',
   },
   {
     icon: Globe,
     title: 'Digital Strategy',
     copy: 'A clear next move for your business — practical roadmaps and working sessions, not forty-slide decks of vague ambition.',
     time: '3–5 business days',
+    image: 'https://fastly.picsum.photos/id/961/640/420.jpg?hmac=D-MWYMcInl8TM0O1Bqgliti5oy4I8Cwqjg2tNBlA5rc',
+    imageAlt: 'Strategy notes and a roadmap sketched on a whiteboard',
   },
   {
     icon: Gem,
     title: 'Premium Concierge',
     copy: 'High-touch requests where details and discretion matter. Handled personally by the founder, start to finish.',
     time: 'By brief',
+    image: 'https://fastly.picsum.photos/id/1055/640/420.jpg?hmac=cLSIhpT4Stk4xtqBZMV7KPaaXOVa5fpu9P1fhkJtk7o',
+    imageAlt: 'Close-up of a polished premium product detail',
   },
 ]
 

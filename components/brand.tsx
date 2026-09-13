@@ -1,19 +1,19 @@
-import { PlugZap } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 /**
- * Brand glyph: an electric plug with a lightning bolt — the "Sure Plug".
+ * Primary brand lockup: the local SVG logo (emerald plug-glyph mark + wordmark).
  */
-export function BrandMark({ className, glyphClassName }: { className?: string; glyphClassName?: string }) {
+export function BrandLogo({ className, imgClassName }: { className?: string; imgClassName?: string }) {
   return (
-    <span
-      aria-hidden="true"
-      className={cn(
-        'flex size-8 shrink-0 items-center justify-center rounded-lg bg-primary text-background shadow-[0_0_20px_hsl(var(--primary)/.35)]',
-        className,
-      )}
-    >
-      <PlugZap className={cn('size-4', glyphClassName)} />
+    <span className={cn('inline-flex shrink-0 items-center justify-center', className)}>
+      <img
+        src="/logo.svg"
+        alt="Sure Plug"
+        width={220}
+        height={48}
+        loading="eager"
+        className={cn('h-9 w-auto', imgClassName)}
+      />
     </span>
   )
 }

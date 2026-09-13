@@ -28,6 +28,22 @@ export function WhyUs() {
             <span className="size-1.5 animate-pulse rounded-full bg-primary" />
             Every operator checked by hand
           </div>
+
+          <div className="relative mt-8 overflow-hidden rounded-2xl border border-white/10">
+            <img
+              src="https://fastly.picsum.photos/id/284/800/560.jpg?hmac=6hDixQvwzGtZjwqOn5OG1Hib2ZcGBpWxikUnJw908Fg"
+              alt="A Sure Plug specialist reviewing a client brief at a clean desk"
+              width={800}
+              height={560}
+              loading="lazy"
+              decoding="async"
+              className="h-52 w-full object-cover sm:h-64"
+            />
+            <span className="absolute inset-0 bg-gradient-to-t from-[#0b1010]/75 via-transparent to-transparent" />
+            <span className="absolute bottom-3 left-4 font-mono text-[10px] uppercase tracking-[.18em] text-white/90">
+              One operator, end to end
+            </span>
+          </div>
         </motion.div>
 
         <div className="grid gap-4 sm:grid-cols-2">

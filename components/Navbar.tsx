@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowRight, Mail, Menu, MessageCircle, X } from 'lucide-react'
 import { navLinks } from '@/lib/data'
 import { site, whatsappUrl } from '@/lib/site'
-import { BrandMark } from './brand'
+import { BrandLogo } from './brand'
 import { useRequest } from './request-context'
 
 export function Navbar() {
@@ -33,13 +33,8 @@ export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-white/[0.08] bg-background/75 backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
-        <a
-          href="#top"
-          className="flex min-w-0 items-center gap-2.5 font-mono text-[13px] font-bold tracking-[0.16em] text-white sm:text-sm sm:tracking-[0.18em]"
-        >
-          <BrandMark />
-          <span className="truncate">{site.name.toUpperCase()}</span>
-          <span className="ml-0.5 hidden size-1.5 rounded-full bg-primary shadow-[0_0_10px_hsl(var(--primary))] sm:block" />
+        <a href="#top" aria-label="Sure Plug — back to top">
+          <BrandLogo />
         </a>
 
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
@@ -92,10 +87,9 @@ export function Navbar() {
               className="fixed inset-y-0 right-0 z-50 flex w-[min(20rem,85vw)] flex-col border-l border-white/10 bg-[#0c1410] shadow-2xl md:hidden"
             >
               <div className="flex items-center justify-between border-b border-white/10 px-5 py-5">
-                <span className="flex items-center gap-2.5 font-mono text-[13px] font-bold tracking-[0.16em] text-white">
-                  <BrandMark />
-                  {site.name.toUpperCase()}
-                </span>
+                <a href="#top" aria-label="Sure Plug — back to top" onClick={closeMenu}>
+                  <BrandLogo />
+                </a>
                 <button
                   ref={closeBtnRef}
                   aria-label="Close menu"

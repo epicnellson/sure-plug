@@ -30,6 +30,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  icons: {
+    icon: [{ url: '/brand-mark.svg', type: 'image/svg+xml' }],
+    shortcut: '/brand-mark.svg',
+    apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
+  },
+  appleWebApp: {
+    title: site.name,
+    capable: true,
+    statusBarStyle: 'black-translucent',
+  },
+  manifest: '/site.webmanifest',
   openGraph: {
     type: 'website',
     url: '/',
@@ -37,12 +48,21 @@ export const metadata: Metadata = {
     title,
     description:
       'Fast, verified, and 100% reliable. Direct execution with zero middleman delays. Sure Plug connects you directly with specialized developers & designers — real timelines, direct replies, no ghosting.',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: `${site.name} — Direct Execution. No Middlemen.`,
+      },
+    ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title,
     description:
       'Fast, verified, and 100% reliable. Direct execution with zero middleman delays. Sure Plug connects you directly with specialized developers & designers — real timelines, direct replies, no ghosting.',
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
