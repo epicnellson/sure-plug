@@ -33,7 +33,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.05 }}
-            className="max-w-3xl text-balance text-3xl font-medium leading-tight tracking-[-.05em] text-white sm:text-4xl lg:text-5xl"
+            className="max-w-3xl text-balance text-3xl font-medium leading-tight tracking-[-.05em] text-white sm:text-4xl xl:text-5xl"
           >
             Your <span className="text-primary">Sure Plug</span> for Quality Tech, Design &amp;
             Sourcing.
