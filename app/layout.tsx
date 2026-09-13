@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   icons: {
-    icon: [{ url: '/brand-mark.svg', type: 'image/svg+xml' }],
-    shortcut: '/brand-mark.svg',
+    icon: [{ url: '/brand-mark.png', sizes: '512x512', type: 'image/png' }],
+    shortcut: '/brand-mark.png',
     apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
   },
   appleWebApp: {
