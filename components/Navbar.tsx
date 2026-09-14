@@ -46,7 +46,7 @@ export function Navbar() {
         </nav>
 
         <button
-          onClick={openRequest}
+          onClick={() => openRequest()}
           className="group hidden items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-background shadow-[0_0_24px_hsl(var(--primary)/.22)] transition hover:bg-primary/90 hover:shadow-[0_0_32px_hsl(var(--primary)/.4)] active:scale-[.98] md:flex"
         >
           Start a request

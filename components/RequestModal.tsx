@@ -16,7 +16,15 @@ const inputClass =
 
 const FOCUSABLE_SELECTOR = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
 
-export function RequestModal({ open, onClose }: { open: boolean; onClose: () => void }) {
+export function RequestModal({
+  open,
+  onClose,
+  presetService,
+}: {
+  open: boolean
+  onClose: () => void
+  presetService?: string
+}) {
   const [form, setForm] = useState<RequestForm>(initialForm)
   const [errors, setErrors] = useState<FormErrors>({})
   const [status, setStatus] = useState<'idle' | 'loading' | 'success'>('idle')
@@ -45,6 +53,11 @@ export function RequestModal({ open, onClose }: { open: boolean; onClose: () => 
       setForm(initialForm)
     }, 250)
   }, [onClose])
+
+  useEffect(() => {
+    if (!open || !presetService) return
+    setForm((prev) => ({ ...prev, service: presetService }))
+  }, [open, presetService])
 
   useEffect(() => {
     if (!open) return

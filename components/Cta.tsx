@@ -26,7 +26,7 @@ export function Cta() {
           Drop the brief below. We&apos;ll match it to the right specialist and come back with a
           name, a realistic timeline, and a clear next step — usually the same day.
         </p>
-        <CtaButton onClick={openRequest} className="group mt-9">
+        <CtaButton onClick={() => openRequest()} className="group mt-9">
           Start a request
           <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
         </CtaButton>

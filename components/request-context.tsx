@@ -4,21 +4,25 @@ import { createContext, useCallback, useContext, useState, type ReactNode } from
 import { RequestModal } from './RequestModal'
 
 interface RequestContextValue {
-  openRequest: () => void
+  openRequest: (service?: string) => void
 }
 
 const RequestContext = createContext<RequestContextValue | null>(null)
 
 export function RequestProvider({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false)
+  const [presetService, setPresetService] = useState<string | undefined>(undefined)
 
-  const openRequest = useCallback(() => setOpen(true), [])
+  const openRequest = useCallback((service?: string) => {
+    setPresetService(service)
+    setOpen(true)
+  }, [])
   const closeRequest = useCallback(() => setOpen(false), [])
 
   return (
     <RequestContext.Provider value={{ openRequest }}>
       {children}
-      <RequestModal open={open} onClose={closeRequest} />
+      <RequestModal open={open} onClose={closeRequest} presetService={presetService} />
     </RequestContext.Provider>
   )
 }

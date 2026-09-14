@@ -54,7 +54,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.25 }}
             className="mt-10 flex flex-wrap items-center gap-3"
           >
-            <CtaButton onClick={openRequest} className="group">
+            <CtaButton onClick={() => openRequest()} className="group">
               Get connected now
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
             </CtaButton>

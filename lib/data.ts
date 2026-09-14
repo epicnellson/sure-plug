@@ -9,6 +9,7 @@ import {
 } from 'lucide-react'
 
 export interface Service {
+  slug: string
   icon: LucideIcon
   title: string
   copy: string
@@ -20,6 +21,7 @@ export interface Service {
 
 export const services: Service[] = [
   {
+    slug: 'web-development',
     icon: CodeXml,
     title: 'Web & App Development',
     copy: 'Sites, dashboards, and automations built by developers who reply to your messages. Scope agreed up front, builds shipped in stages.',
@@ -29,6 +31,7 @@ export const services: Service[] = [
     imageAlt: 'Code editor on a laptop — the web and app builds we ship',
   },
   {
+    slug: 'graphic-design',
     icon: Palette,
     title: 'Custom Graphic Design',
     copy: 'Logos, packaging, and brand assets with source files and a documented rationale. Revisions included, no silent retention.',
@@ -37,6 +40,7 @@ export const services: Service[] = [
     imageAlt: 'Designer crafting brand and interface mockups',
   },
   {
+    slug: 'product-sourcing',
     icon: ShoppingBag,
     title: 'Product Sourcing',
     copy: 'Hard-to-find goods and verified vendors, with quotes, lead times, and QC checklists put in writing before you commit.',
@@ -45,6 +49,7 @@ export const services: Service[] = [
     imageAlt: 'Container and production logistics — supplier verification',
   },
   {
+    slug: 'priority-assistance',
     icon: MessageCircle,
     title: 'Priority Assistance',
     copy: 'A direct line to someone who moves when the clock is running. For time-sensitive asks where a slow reply costs real money.',
@@ -53,6 +58,7 @@ export const services: Service[] = [
     imageAlt: 'Support team at workstations — priority assistance on demand',
   },
   {
+    slug: 'digital-strategy',
     icon: Globe,
     title: 'Digital Strategy',
     copy: 'A clear next move for your business — practical roadmaps and working sessions, not forty-slide decks of vague ambition.',
@@ -61,6 +67,7 @@ export const services: Service[] = [
     imageAlt: 'Analytics dashboard on a laptop — digital strategy and roadmap',
   },
   {
+    slug: 'premium-concierge',
     icon: Gem,
     title: 'Premium Concierge',
     copy: 'High-touch requests where details and discretion matter. Handled personally by the founder, start to finish.',
@@ -69,6 +76,10 @@ export const services: Service[] = [
     imageAlt: 'A personal team working together — your concierge service',
   },
 ]
+
+export function getServiceBySlug(slug: string): Service | undefined {
+  return services.find((service) => service.slug === slug)
+}
 
 export interface WhyPoint {
   icon: LucideIcon
@@ -135,6 +146,8 @@ export const serviceOptions = [
   'Custom Graphic Design',
   'Product Sourcing',
   'Priority Assistance',
+  'Digital Strategy',
+  'Premium Concierge',
 ]
 
 export const budgetOptions = ['Under $500', '$500 - $1,500', '$1,500 - $5,000', '$5,000+']
